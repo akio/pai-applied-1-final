@@ -1,0 +1,24 @@
+/* tools/build_report.py が Markdown から作る資料の見た目 (A4 で印刷する前提) */
+@page { size: A4; margin: 12mm 13mm 11mm 13mm; }
+* { box-sizing: border-box; }
+body { font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif; font-size: 8.6pt; line-height: 1.5; color: #1d2330; margin: 0; }
+h1 { font-size: 16pt; margin: 0 0 1mm; letter-spacing: 0.02em; }
+p.sub { color: #5a6475; font-size: 8.4pt; margin-bottom: 3mm; }
+h2 { font-size: 10.5pt; margin: 3.2mm 0 1.4mm; padding: 0.6mm 0 0.6mm 2.2mm; border-left: 1.2mm solid #3b6fb6; background: #eef3fa; }
+h3 { font-size: 9pt; margin: 2mm 0 0.6mm; color: #23466f; }
+p { margin: 0 0 1.2mm; }
+ul { margin: 0 0 1.2mm; padding-left: 4.5mm; }
+li { margin-bottom: 0.5mm; }
+li > strong:first-child, li > p > strong:first-child { color: #23466f; }
+table { border-collapse: collapse; width: 100%; margin: 0.6mm 0 1.6mm; font-size: 8.1pt; }
+th, td { border: 0.25mm solid #c5ccd8; padding: 0.7mm 1.4mm; vertical-align: top; }
+th { background: #e4eaf3; font-weight: 700; white-space: nowrap; text-align: left; }
+td > strong:only-child { white-space: nowrap; }  /* 太字だけのセル (表の行の見出し) は折り返さない */
+td[style*="right"] { white-space: nowrap; }
+.row { display: flex; gap: 4mm; align-items: flex-start; }
+.col { flex: 1; min-width: 0; }
+figure { margin: 0.6mm 0 1.6mm; }
+figure img { width: 100%; display: block; }
+figcaption { font-size: 7.6pt; color: #5a6475; margin-top: 0.6mm; }
+p.note { font-size: 7.6pt; color: #5a6475; }
+.page-break { break-after: page; }

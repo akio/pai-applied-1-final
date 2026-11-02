@@ -1,0 +1,7 @@
+.venv/
+Genesis/
+logs/
+videos/
+__pycache__/
+docs/*.html
+docs/*.pdf
